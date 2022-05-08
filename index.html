@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Flip the Cards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p id="info" class="bg-green-300 text-stone-500 transition-all duration-1000 text-center pt-5 text-xl">Click the P to get started.</p>
+    <!--Card 1-->
+    <div id="card" class="grid bg-green-300 duration-1000 grid-cols-2 transition-all place-content-center h-screen w-screen gap-1">
+        <div class="text-center tileF h-20 w-20 md:w-40 md:h-40 lg:w-60 lg:h-60 transition-all before-turn duration-500">
+
+            <div>
+            <p id="bt1" class="mt-4 h-20 md:w-40 md:h-40 lg:h-60 lg:w-60 w-20 transition-all duration-500 text-5xl lg:text-9xl lg:mt-14 text-white">F</p>
+            </div>
+
+            <div id="at1" class="hidden font-mono text-white mt-3 h-60 transition-all duration-500 w-[30.25rem]">
+                <p class="text-2xl skew-180 underline-offset-2">FIGURES</p>
+                <p class="skew-180">0 <span id="won">WON -</span> 0 <span id="lost">LOST - </span> 0 <span id="abondoned">ABANDONED</span></p>
+                <div class="grid grid-cols-2 mt-5 space-x-10 skew-180 relative left-3 pt-8">
+                    <ul>
+                        <li>Best Casual : <span id="casual">0</span></li>
+                        <li>Best Medium : <span id="medium">0</span></li>
+                        <li>Best Hard : <span id="hard">0</span></li>
+                    </ul>
+
+                    <ul>
+                        <li>Total Flips : <span id="totalf">0</span></li>
+                        <li>Matched Flips : <span id="matchedf">0</span></li>
+                        <li>Wrong Flips : <span id="wrongf">0</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         <!--Card 2-->
+        <div id="hideF" class="place-self-start text-center h-20 w-20 md:w-40 md:h-40 transition-all duration-500 lg:w-60 lg:h-60 bg-red-600">
+            <p class="mt-4 text-5xl lg:text-9xl lg:mt-14 text-white skew-180">L</p>
+        </div>
+
+         <!--Card 3-->
+        <div class="tileI h-20 w-20 md:w-40 md:h-40 lg:w-60 lg:h-60 transition-all before-turn duration-500">
+
+            <div>
+            <p id="bt2" class="mt-4 text-center transition-all duration-500 text-5xl lg:text-9xl lg:mt-14 text-white">I</p>
+            </div>
+
+            <div id="at2" class="hidden pl-4 pr-2 skew-180 font-mono text-white mt-3 h-60 transition-all duration-500 w-[30.25rem]">
+                <h1 class="text-2xl pt-2">INSTRUCTIONS</h1>
+                <p class="text-xs">Press [p] to pause, or [ESC] to abandon game.</p><br>
+                <p class="text-xs">Flip is a timed card memory game. Click the green cards to see what symbol they uncover and try to find the matching symbol underneath the other cards.</p>
+                <p class="text-xs">Uncover two matching symbols at once to eliminate them from the game.</p><br>
+                <p class="text-xs">Eliminate all cards as fast as you can to win the game. Have fun FLIPing!</p><br>
+            </div>
+
+        </div>
+
+        <!--Card 4-->
+        <div id="hideI" class="place-self-start hover:bg-[#478e7c] md:w-40 md:h-40 text-center tileP h-20 w-20 transition-all duration-500 lg:w-60 lg:h-60 bg-[#4b9e86]">
+            <div id="bt3">
+                <p class="mt-4 text-5xl lg:text-9xl lg:mt-14 text-white">P</p>
+            </div>
+
+            <div id="at3" class="flex hidden flex-col place-items-center bg-red-600 text-white w-full h-full font-extralight skew-180 text-2xl">
+                <a levelNum="8" id="casual" class="h-1/3 level text-opacity-20 w-full hover:bg-red-500 pt-6">CASUAL</a>
+                <a levelNum="12" id="medium" class="h-1/3 level text-opacity-20 w-full hover:bg-red-500 pt-6">MEDIUM</a>
+                <a levelNum="16" id="hard" class="h-1/3 level text-opacity-20 w-full hover:bg-red-500 pt-6">HARD</a>
+            </div>
+        </div>
+    </div>
+    <div id="gameScreen" class="grid hidden skew-180 grid-cols-4 w-screen gap-0.5 duration-500 bg-black transition-all h-screen">
+        <div id="1" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="2" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="3" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="4" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="5" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="6" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="7" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="8" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="9" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="10" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="11" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="12" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="13" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="14" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="15" class="duration-500 card-bt hidden transition-all"></div>
+        <div id="16" class="duration-500 card-bt hidden transition-all"></div>
+    </div>
+    
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
